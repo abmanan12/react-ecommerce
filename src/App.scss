@@ -1,0 +1,35 @@
+@import './scss/bootstrap';
+@import './scss/auth';
+@import './scss/navbar';
+@import './scss/hero';
+@import './scss/contact';
+@import './scss/checkout';
+@import './scss/about';
+@import './scss/footer';
+@import './scss/product.scss';
+
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Eudoxus Sans", sans-serif;
+    scroll-behavior: smooth;
+}
+
+
+.bgImgProduct {
+    background: url(../public/images/backgroundImg.jpg) no-repeat center center/cover;
+    height: 250px;
+    width: 97%;
+}
+    

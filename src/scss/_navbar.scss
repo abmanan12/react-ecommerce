@@ -1,0 +1,22 @@
+nav {
+
+    background-color: $danger;
+
+    .navbar-toggler {
+        border-radius: 0;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+
+        &:focus{
+            box-shadow: none;
+        }
+
+    }
+
+}
+
+.nav-item {
+    .active {
+        font-weight: bold;
+    }
+}

@@ -1,0 +1,51 @@
+@media screen and (max-width: 1200px) {
+    .contact-width {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .contact-width {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contact-width {
+        width: 96%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .contact-width {
+        width: 80%;
+    }
+}
+
+.contact-width {
+
+    textarea,
+    input {
+        padding: 0.5rem auto;
+        border-radius: 0;
+
+        &:focus {
+            box-shadow: none;
+        }
+
+    }
+
+    .contact-icon {
+        font-size: 1.5rem;
+        margin-right: 1rem;
+        border: 2px solid;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+    }
+
+    p {
+        font-size: 14px;
+    }
+}

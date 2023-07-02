@@ -1,0 +1,71 @@
+$warning: #FD8F5E;
+$danger: #F2E1D9;
+
+@import '~bootstrap/scss/bootstrap.scss';
+@import 'react-toastify/dist/ReactToastify.css';
+
+
+.content-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 100%;
+}
+
+
+//////////////////////// topbar ////////////////////////
+
+.logo {
+    top: -1%;
+    position: absolute;
+}
+
+
+.topbar {
+    margin-bottom: 4rem;
+
+    .topbar-text {
+        height: 250px;
+        display: flex;
+        align-items: center;
+        padding-left: 10%;
+        color: white;
+
+        .link {
+            color: white;
+            text-decoration: none;
+        }
+
+    }
+
+    &::after {
+        content: "";
+        width: 84%;
+        height: 4.3rem;
+        right: 0;
+        position: absolute;
+        background-color: $danger;
+    }
+}
+
+////////////////////////  //  ////////////////////////
+
+
+input {
+    accent-color: $warning;
+
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+
+.txt-justify {
+    text-align: justify;
+}

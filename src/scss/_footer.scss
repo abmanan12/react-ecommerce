@@ -1,0 +1,40 @@
+.top-footer {
+
+    background-color: $danger;
+    margin-right: 1rem;
+
+    .topfooter-icon {
+        font-size: 4rem;
+    }
+
+}
+
+@media screen and (max-width: 1200px) {
+    .topfooter-width {
+        width: 84%;
+    }
+}
+
+@media screen and (max-width: 1010px) {
+    .topfooter-width {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .topfooter-width {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .topfooter-width {
+        width: 98%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .topfooter-width {
+        width: 80%;
+    }
+}

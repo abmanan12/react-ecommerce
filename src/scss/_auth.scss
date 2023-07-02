@@ -1,0 +1,93 @@
+@media screen and (max-width: 1200px) {
+    .auth-width {
+        width: 48%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .auth-width {
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .auth-width {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .auth-width {
+        width: 92%;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .auth-width {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .auth-width {
+        width: 42%;
+    }
+}
+
+
+.auth-title {
+
+    text-align: center;
+    margin-bottom: 1rem;
+
+    h3 {
+        font-weight: bold;
+        padding-top: 0.55rem;
+    }
+
+    p {
+        font-size: 0.75rem;
+    }
+
+}
+
+
+.auth-input {
+
+    label {
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    input {
+        border-radius: 0;
+        padding: 0.55rem 0.75rem;
+        margin-top: 0.30rem;
+    }
+
+}
+
+
+.auth-button {
+
+    display: flex;
+    align-items: center;
+
+    p {
+        font-size: 0.75rem;
+    }
+
+    button {
+        color: white;
+        padding-top: 0.50rem;
+        padding-bottom: 0.50rem;
+        border-radius: 0;
+    }
+
+}
+
+.background {
+    background: url(../../public/images/backgroundImg.jpg) no-repeat center center/cover;
+    width: 100%;
+    min-height: 100vh;
+}
