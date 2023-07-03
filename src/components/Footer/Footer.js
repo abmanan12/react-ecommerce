@@ -61,8 +61,9 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    <div className="text-center p-2 p-sm-4 ">Copyright &copy;{year}. All rights reserved | This website is made with
-                        <span className='text-warning'>&hearts;</span> by <span style={{ color: '#F2E1D9' }}>Abdul Manan</span>.</div>
+                    <div className="text-center p-2 p-sm-4 ">Copyright &copy;{year}. All rights reserved | This
+                        website is made with <span className='text-warning ms-1'>&hearts;</span> by <span
+                            className='text-warning'>Abdul Manan</span>.</div>
 
                 </div>
             </footer>

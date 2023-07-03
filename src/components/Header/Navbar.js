@@ -76,9 +76,6 @@ export default function Navbar() {
                                 <NavLink to='/about' className="nav-link">About</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink to='/checkout' className="nav-link">Checkout</NavLink>
-                            </li>
-                            <li className="nav-item">
                                 <NavLink to='/contact' className="nav-link">Contact</NavLink>
                             </li>
                         </ul>

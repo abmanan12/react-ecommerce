@@ -6,7 +6,8 @@
 @import './scss/checkout';
 @import './scss/about';
 @import './scss/footer';
-@import './scss/product.scss';
+@import './scss/cart';
+@import './scss/product';
 
 #root {
     display: flex;
@@ -32,4 +33,3 @@ main {
     height: 250px;
     width: 97%;
 }
-    
