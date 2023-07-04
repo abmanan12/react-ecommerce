@@ -1,19 +1,10 @@
-import React, { useState } from 'react'
-import { Products } from '../../../data/products'
-import Instra from '../../../components/Instra'
+import React from 'react'
+
 import HeroCard from './HeroCard'
+import Instra from '../../../components/Instra'
+import { Link } from 'react-router-dom'
 
 export default function Hero() {
-
-  const [product, setProduct] = useState(Products)
-
-  const filterProduct = category => {
-    const productAfterDelete = Products.filter((elem) => {
-      return elem.category == category
-    })
-    setProduct(productAfterDelete)
-  }
-
   return (
     <>
       <div className='hero'>
@@ -29,8 +20,8 @@ export default function Hero() {
                     <h3 className='fw-bold'>FURNITURE AT COST</h3>
                     <p className='text-muted txt-justify'>Suspendisse varius enim in eros elementum
                       tristique. Duis cursus, mi quis viverra ornare, eros dollar interdum nulla.</p>
-                    <button className='btn btn-warning btn-sm py-2 rounded-0'>
-                      DISCOVER MORE</button>
+                    <Link to='/product1' className='btn btn-warning text-white btn-sm py-2 rounded-0'>
+                      DISCOVER MORE</Link>
 
                   </div>
                 </div>
@@ -42,72 +33,40 @@ export default function Hero() {
       </div>
 
 
-      <div className="container pb-5" style={{ paddingTop: '6rem' }}>
+      <div className="container py-5 hero-products" style={{ marginTop: '6rem' }}>
 
         <div className="row text-sm-center px-4 px-sm-5">
           <div className="col">
             <h3 className='fw-bold'>POPULAR PRODUCTS</h3>
-            <p className='txt-justify text-sm-center'>Suspendisse varius enim in eros elementum tristique.
-              Duis cursus, mi quis viverra ornare, eros dollar interdum nulla.</p>
+            <p className='txt-justify text-sm-center'>Suspendisse varius enim in eros elementum tristique. Duis
+              cursus, mi quis viverra ornare, eros dollar interdum nulla.</p>
           </div>
         </div>
 
-
-        {/* <div className="row d-flex justify-content-between">
-              <div className="col-6 col-sm-4 col-lg-2">
-                <button className='btn border-0' onClick={() => { filterProduct('sofa') }}>Sofa</button>
-              </div>
-              <div className="col-6 col-sm-4 col-lg-2">
-                <button className='btn border-0' onClick={() => { filterProduct('table') }}>Table</button>
-              </div>
-              <div className="col-6 col-sm-4 col-lg-2">
-                <button className='btn border-0' onClick={() => { filterProduct('chair') }}>Chair</button>
-              </div>
-              <div className="col-6 col-sm-4 col-lg-2">
-                <button className='btn border-0' onClick={() => { filterProduct('bed') }}>Bed</button>
-              </div>
-              <div className="col-6 col-sm-4 col-lg-2">
-                <button className='btn border-0' onClick={() => { filterProduct('lightning') }}>Lightning</button>
-              </div>
-              <div className="col-6 col-sm-4 col-lg-2">
-                <button className='btn border-0' onClick={() => { filterProduct('decore') }}>Decore</button>
-              </div>
-            </div> */}
-
-      </div>
-
-
-      {/* <div className="container py-4">
         <div className="row">
-          <div className="col-8 offset-2 border-top"></div>
-        </div>
-      </div> */}
-
-      {/* <div className="container">
-        <div className="row">
-          <div className="col-lg-10 offset-lg-1">
+          <div className="col-10 offset-1">
 
             <div className="row text-center">
-              {
-                product.map((elem, i) => {
-                  return (
-                    <div className="col-6 col-lg-4 mt-3" key={i}>
-                      <div className="card rounded-0 border-light" style={{ width: '100%' }}>
-                        <img className="card-img-top rounded-0" style={{ height: '10rem' }} src={elem.image} alt={elem.name} />
-                        <div className="card-body">
-                          <p className="card-text">{elem.description}</p>
-                          <h5 className="card-title">{elem.price}</h5>
-                        </div>
-                      </div>
-                    </div>
-                  )
-                })
-              }
+              <HeroCard description='A luxurious leather sofa for a touch of elegance.' price='1699.99' id='furItem19'
+                link='https://images.pexels.com/photos/6933860/pexels-photo-6933860.jpeg?auto=compress&cs=tinysrgb&w=400' />
+
+              <HeroCard description='An L-shaped sofa for versatile seating options.' price='1499.99' id='furItem28'
+                link='https://images.pexels.com/photos/6980714/pexels-photo-6980714.jpeg?auto=compress&cs=tinysrgb&w=400' />
+
+              <HeroCard description='A versatile convertible sofa that can be adjusted for sitting or sleeping.' price='899.9'
+                id='furItem13' link='https://images.pexels.com/photos/269218/pexels-photo-269218.jpeg?auto=compress&cs=tinysrgb&w=400' />
             </div>
 
           </div>
         </div>
-      </div> */}
+
+        <div className="row text-center my-3">
+          <div className="col">
+            <Link to='/product1' className='btn btn-outline-warning rounded-0'>DISCOVER MORE</Link>
+          </div>
+        </div>
+
+      </div>
 
 
       <div className="container-fluid py-5 hero-menufacturer">
@@ -127,7 +86,7 @@ export default function Hero() {
                   quis viverra ornare, eros dollar interdum nulla.</p>
                 <p className='txt-justify'>Suspendisse varius enim in eros elementum tristique. Duis cursus, mi
                   quis viverra ornare, eros dollar interdum nulla.</p>
-                <button className='btn btn-warning rounded-0'>DISCOVER MORE</button>
+                <Link to='/product1' className='btn btn-warning text-white rounded-0'>DISCOVER MORE</Link>
               </div>
 
             </div>
@@ -151,14 +110,14 @@ export default function Hero() {
           <div className="col-10 offset-1">
 
             <div className="row text-center">
-              <HeroCard name='By Microfiber / Microsued 56" Armless Loveseat' price='367$'
-                link='/images/Chair-2.jpg' />
+              <HeroCard description='An eye-catching accent chair to add personality to your space.' price='199.99' id='furItem16'
+                link='https://images.pexels.com/photos/106839/pexels-photo-106839.jpeg?auto=compress&cs=tinysrgb&w=400' />
 
-              <HeroCard name='By Microfiber / Microsued 56" Armless Loveseat' price='367$'
-                link='/images/Chair-3.jpeg' />
+              <HeroCard description='An elegant armchair for comfortable seating.' price='249.99' id='furItem22'
+                link='https://images.pexels.com/photos/1366875/pexels-photo-1366875.jpeg?auto=compress&cs=tinysrgb&w=400' />
 
-              <HeroCard name='By Microfiber / Microsued 56" Armless Loveseat' price='367$'
-                link='/images/Chair-5.jpeg' />
+              <HeroCard description='Elegant dining chairs for comfortable seating during meals.' price='99.99' id='furItem10'
+                link='https://images.pexels.com/photos/2082090/pexels-photo-2082090.jpeg?auto=compress&cs=tinysrgb&w=400' />
             </div>
 
           </div>
@@ -166,7 +125,7 @@ export default function Hero() {
 
         <div className="row text-center my-3">
           <div className="col">
-            <button className='btn btn-outline-warning rounded-0'>DISCOVER MORE</button>
+            <Link to='/product1' className='btn btn-outline-warning rounded-0'>DISCOVER MORE</Link>
           </div>
         </div>
 
@@ -190,14 +149,14 @@ export default function Hero() {
           <div className="col-10 offset-1">
 
             <div className="row text-center">
-              <HeroCard name='By Microfiber / Microsued 56" Armless Loveseat' price='367$'
-                link='/images/Sofa-1.jpg' />
+              <HeroCard description='A modern platform bed for a contemporary bedroom.' price='899.99' id='furItem8'
+                link='https://images.pexels.com/photos/1034584/pexels-photo-1034584.jpeg?auto=compress&cs=tinysrgb&w=400' />
 
-              <HeroCard name='By Microfiber / Microsued 56" Armless Loveseat' price='367$'
-                link='/images/Sofa-4.jpg' />
+              <HeroCard description='A canopy bed for a romantic and cozy atmosphere' price='1299.99' id='furItem20'
+                link='https://images.pexels.com/photos/1743229/pexels-photo-1743229.jpeg?auto=compress&cs=tinysrgb&w=400' />
 
-              <HeroCard name='By Microfiber / Microsued 56" Armless Loveseat' price='367$'
-                link='/images/Sofa-5.jpg' />
+              <HeroCard description='A bed with built-in storage drawers for extra convenience.' price='1199.99' id='furItem14'
+                link='https://images.pexels.com/photos/262048/pexels-photo-262048.jpeg?auto=compress&cs=tinysrgb&w=400' />
             </div>
 
           </div>
@@ -205,7 +164,7 @@ export default function Hero() {
 
         <div className="row text-center my-3">
           <div className="col">
-            <button className='btn btn-outline-warning rounded-0'>DISCOVER MORE</button>
+            <Link to='/product1' className='btn btn-outline-warning rounded-0'>DISCOVER MORE</Link>
           </div>
         </div>
 

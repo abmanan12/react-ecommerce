@@ -1,28 +1,31 @@
 import React, { useState } from 'react'
 
+import { Link } from 'react-router-dom'
+
 import HeroCard from '../Home/HeroCard'
-import { Products } from '../../../data/products'
+import { furniture } from '../../../data/furniture'
 import Topbar from '../../../components/Header/Topbar'
 
 export default function Product() {
 
-    const [product, setProduct] = useState(Products)
+    const [product, setProduct] = useState(furniture)
 
     const filterProduct = category => {
-        const productAfterDelete = Products.filter((elem) => {
-            return elem.category == category
+        const productAfterSearch = furniture.filter((elem) => {
+            return elem.category === category
         })
-        setProduct(productAfterDelete)
+        setProduct(productAfterSearch)
     }
+
 
     return (
         <>
 
             <Topbar name='PRODUCTS' home='Products' link='product' />
 
-            <div className="container">
-                <div className="row text-center">
-                    <div className="col col-md-6 offset-md-3">
+            <div className="container-fluid content-center">
+                <div className="row product-width px-2 px-sm-3 px-md-4 px-lg-5">
+                    <div className="col">
 
                         <div className="row my-5">
                             <div className="col">
@@ -31,25 +34,15 @@ export default function Product() {
                             </div>
                         </div>
 
-                        <div className="row d-flex justify-content-between pb-3" style={{ borderBottom: '1px solid' }}>
-                            <div className="col-6 col-sm-4 col-lg-2">
-                                <button className='btn border-0' onClick={() => { filterProduct('sofa') }}>Sofa</button>
-                            </div>
-                            <div className="col-6 col-sm-4 col-lg-2">
-                                <button className='btn border-0' onClick={() => { filterProduct('table') }}>Table</button>
-                            </div>
-                            <div className="col-6 col-sm-4 col-lg-2">
-                                <button className='btn border-0' onClick={() => { filterProduct('chair') }}>Chair</button>
-                            </div>
-                            <div className="col-6 col-sm-4 col-lg-2">
-                                <button className='btn border-0' onClick={() => { filterProduct('bed') }}>Bed</button>
-                            </div>
-                            <div className="col-6 col-sm-4 col-lg-2">
-                                <button className='btn border-0' onClick={() => { filterProduct('lightning') }}>Lightning</button>
-                            </div>
-                            <div className="col-6 col-sm-4 col-lg-2">
-                                <button className='btn border-0' onClick={() => { filterProduct('decore') }}>Decore</button>
-                            </div>
+                        <div className="d-flex justify-content-between product-category"
+                            style={{ borderBottom: '1px solid' }}>
+                            <button className='btn border-0 fw-bold' onClick={() => { filterProduct('Sofa') }}>Sofa</button>
+                            <button className='btn border-0 fw-bold' onClick={() => { filterProduct('Table') }}>Table</button>
+                            <button className='btn border-0 fw-bold' onClick={() => { filterProduct('Chair') }}>Chair</button>
+                            <button className='btn border-0 fw-bold' onClick={() => { filterProduct('Bed') }}>Bed</button>
+                            <button className='btn border-0 fw-bold' onClick={() => { filterProduct('Lighting') }}>Lightning</button>
+                            <button className='btn border-0 fw-bold' onClick={() => { filterProduct('Decor') }}>Decor</button>
+                            <button className='btn border-0 fw-bold' onClick={() => { setProduct(furniture) }}>All</button>
                         </div>
 
                     </div>
@@ -57,29 +50,24 @@ export default function Product() {
             </div>
 
 
-            <div className="container hero-products py-5">
-                <div className="row">
-                    <div className="col-lg-10 offset-lg-1">
-
-                        <div className="row text-center">
-                            {
-                                product.map((elem, i) => {
-                                    return (
-                                        <HeroCard key={i} name={elem.description} price={elem.price} link={elem.image} />
-                                    )
-                                })
-                            }
-                        </div>
-
-                    </div>
+            <div className="container-fluid content-center py-4">
+                <div className="row text-center product-width px-2 px-sm-3 px-md-4 px-lg-5">
+                    {
+                        product?.slice(0, 15).map((elem, i) => {
+                            return (
+                                <HeroCard key={i} description={elem.description} price={elem.price} link={elem.image} id={elem.id} />
+                            )
+                        })
+                    }
                 </div>
+            </div>
 
-                <div className="row mt-3 text-center">
+            <div className="container-fluid">
+                <div className="row text-center mb-5">
                     <div className="col">
-                        <button className='btn btn-outline-warning rounded-0'>DISCOVER MORE</button>
+                        <Link to='/product1' className='btn btn-outline-warning rounded-0'>DISCOVER MORE</Link>
                     </div>
                 </div>
-
             </div>
 
         </>

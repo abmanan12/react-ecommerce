@@ -1,12 +1,22 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 
 import { FaStar } from "react-icons/fa";
 import { FiPlus } from 'react-icons/fi';
 import { HiMinusSm } from 'react-icons/hi';
 
+import { furniture } from '../../../data/furniture';
 import Topbar from '../../../components/Header/Topbar';
+import { Link, useParams } from 'react-router-dom';
 
 export default function Product2() {
+
+    let id = useParams().id
+
+    let singleProduct = furniture?.find(curElem => {
+        return curElem.id === id
+    })
+
+    const { name, description, image, price } = singleProduct
 
     let ratingStar = Array.from({ length: 5 }, curElem => {
         return (
@@ -14,9 +24,21 @@ export default function Product2() {
         )
     })
 
+
+    const messageEndRef = useRef()
+    const scrollBehavior = () => {
+        messageEndRef.current?.scrollIntoView({ behavior: 'smooth' })
+    }
+
+    useEffect(() => {
+        scrollBehavior()
+    }, [])
+
+
     return (
         <>
 
+            <div ref={messageEndRef}></div>
             <Topbar name='PRODUCT DETAILS' home='Product Details' link='product2' />
 
             <div className="container py-5">
@@ -25,26 +47,26 @@ export default function Product2() {
                     <div className="col-12 col-md-6 text-center product2-images">
                         <div className="row">
                             <div className="col">
-                                <img src="/images/backgroundImg.jpg" style={{ width: '70%' }}
-                                    alt="Background-Img" />
+                                <img src={image} style={{ width: '80%' }}
+                                    alt={name} />
                             </div>
                         </div>
-                        <div className="row mt-2">
+                        {/* <div className="row mt-2">
                             <div className="col">
                                 <img src="/images/backgroundImg.jpg" alt="Background-Img" />
                                 <img src="/images/backgroundImg.jpg" className='mx-2 mx-sm-3' alt="Background-Img" />
                                 <img src="/images/backgroundImg.jpg" alt="Background-Img" />
                                 <img src="/images/backgroundImg.jpg" className='ms-2 ms-sm-3' alt="Background-Img" />
                             </div>
-                        </div>
+                        </div> */}
                     </div>
 
                     <div className="col-12 col-md-6">
                         <div className="row pt-4 pt-md-0 px-3 px-md-0">
 
                             <div className="col">
-                                <h4 className='fw-bold'>Faded SkyBlu Denim Jeans</h4>
-                                <h4 className='fw-bold text-warning'>$149</h4>
+                                <h4 className='fw-bold'>{name}</h4>
+                                <h4 className='fw-bold text-warning'>{price}</h4>
                             </div>
                             <div className="row mt-2" style={{ fontSize: '14px' }}>
                                 <div className="col">
@@ -59,10 +81,7 @@ export default function Product2() {
                             </div>
                             <div className="row">
                                 <div className="col">
-                                    <p className='txt-justify' style={{ fontSize: '15px' }}>Mil Oil is an innnovative oil
-                                        filled radiator with the most modern technology. If you are looking for something
-                                        that can make your interior look awesome, and at the same time.
-                                    </p>
+                                    <p className='txt-justify' style={{ fontSize: '15px' }}>{description}</p>
                                 </div>
                             </div>
                             <div className="row mt-3">
@@ -74,7 +93,7 @@ export default function Product2() {
                             </div>
                             <div className="row mt-4">
                                 <div className="col">
-                                    <button className='btn rounded-0 bg-warning'>ADD TO CART</button>
+                                    <Link to='/cart' className='btn rounded-0 text-white bg-warning'>ADD TO CART</Link>
                                 </div>
                             </div>
 
@@ -180,7 +199,7 @@ export default function Product2() {
 
                         <div className="row mt-3 text-end">
                             <div className="col">
-                                <button className='btn rounded-0 bg-warning'>Submit Now</button>
+                                <button className='btn rounded-0 text-white bg-warning'>Submit Now</button>
                             </div>
                         </div>
                     </div>

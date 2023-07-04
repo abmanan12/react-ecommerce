@@ -1,12 +1,23 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import Topbar from '../../../components/Header/Topbar'
 import { FaTrash } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 
 export default function Cart() {
+
+    const messageEndRef = useRef()
+    const scrollBehavior = () => {
+        messageEndRef.current?.scrollIntoView({ behavior: 'smooth' })
+    }
+
+    useEffect(() => {
+        scrollBehavior()
+    }, [])
+
     return (
         <>
 
+            <div ref={messageEndRef}></div>
             <Topbar name='CART LIST' home='Cart List' link='cart' />
 
             <div className="container py-5">

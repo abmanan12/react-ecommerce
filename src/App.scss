@@ -9,16 +9,6 @@
 @import './scss/cart';
 @import './scss/product';
 
-#root {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-main {
-    flex: 1 0 auto;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -28,8 +18,12 @@ main {
 }
 
 
-.bgImgProduct {
-    background: url(../public/images/backgroundImg.jpg) no-repeat center center/cover;
-    height: 250px;
-    width: 97%;
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1 0 auto;
 }

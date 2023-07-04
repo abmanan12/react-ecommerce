@@ -1,11 +1,22 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import Topbar from '../../../components/Header/Topbar'
 
 export default function Checkout() {
+
+  const messageEndRef = useRef()
+  const scrollBehavior = () => {
+    messageEndRef.current?.scrollIntoView({ behavior: 'smooth' })
+  }
+
+  useEffect(() => {
+    scrollBehavior()
+  }, [])
+
   return (
     <>
 
+      <div ref={messageEndRef}></div>
       <Topbar name='CHECKOUT' home='Checkout' link='checkout' />
 
       <div className="container-fluid py-5 content-center">
@@ -256,7 +267,7 @@ export default function Checkout() {
                   </div>
                   <div className="row mt-4">
                     <div className="col">
-                      <button className='btn w-100' style={{fontSize: '14px'}}>PROCEED TO PAYPAL</button>
+                      <button className='btn w-100' style={{ fontSize: '14px' }}>PROCEED TO PAYPAL</button>
                     </div>
                   </div>
 

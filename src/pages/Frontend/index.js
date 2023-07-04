@@ -11,7 +11,6 @@ import Product2 from './Product2'
 import Contact from './Contact'
 import Cart from './Cart'
 import Checkout from './Checkout'
-import Sidebar from './Sidebar'
 import PrivateRoute from '../PrivateRoute'
 
 export default function index() {
@@ -22,16 +21,13 @@ export default function index() {
                 <Routes>
                     <Route path='/'>
                         <Route index element={<Home />} />
-                        {/* <Route path='/product' element={<PrivateRoute Component={Product} />} /> */}
-                        <Route path='/product' element={<Product />} />
                         <Route path='/about' element={<About />} />
-                        {/* <Route path='/contact' element={<PrivateRoute Component={Contact} />} /> */}
-                        <Route path='/contact' element={<Contact />} />
-                        <Route path='/cart' element={<Cart />} />
-                        <Route path='/checkout' element={<Checkout />} />
+                        <Route path='/product' element={<Product />} />
                         <Route path='/product1' element={<Product1 />} />
-                        <Route path='/product2' element={<Product2 />} />
-                        <Route path='/sidebar' element={<Sidebar />} />
+                        <Route path='/cart' element={<PrivateRoute Component={Cart} />} />
+                        <Route path='/contact' element={<PrivateRoute Component={Contact} />} />
+                        <Route path='/checkout' element={<PrivateRoute Component={Checkout} />} />
+                        <Route path='/product2/:id' element={<PrivateRoute Component={Product2} />} />
                     </Route>
                 </Routes>
             </main>

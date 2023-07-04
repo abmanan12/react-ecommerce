@@ -25,7 +25,7 @@ export default function About() {
       <div className="container">
         <div className="row text-center">
           <div className="col">
-            <img src="/images/Chair-3.jpeg" className='about-img px-2' alt="Chair Pic" />
+            <img src="/images/table-1.jpeg" className='about-img px-2' alt="Chair Pic" />
           </div>
         </div>
       </div>

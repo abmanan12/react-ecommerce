@@ -19,6 +19,27 @@ $danger: #F2E1D9;
 }
 
 
+.txt-justify {
+    text-align: justify;
+}
+
+
+input {
+    accent-color: $warning;
+
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+
+.bgImgProduct {
+    background: url(../../public/images/backgroundImg.jpg) no-repeat center center/cover;
+    height: 250px;
+    width: 97%;
+}
+
+
 //////////////////////// topbar ////////////////////////
 
 .logo {
@@ -52,20 +73,4 @@ $danger: #F2E1D9;
         position: absolute;
         background-color: $danger;
     }
-}
-
-////////////////////////  //  ////////////////////////
-
-
-input {
-    accent-color: $warning;
-
-    &:focus {
-        box-shadow: none;
-    }
-}
-
-
-.txt-justify {
-    text-align: justify;
 }

@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { BsFilter } from 'react-icons/bs';
 
 import { Products } from '../../../data/products';
+import { furniture } from '../../../data/furniture';
 import Topbar from '../../../components/Header/Topbar';
 
 
@@ -40,19 +41,28 @@ export default function Product1() {
         console.log(product)
         console.log(e.target.value)
     }
-    console.log(value)
+
+    const messageEndRef = useRef()
+    const scrollBehavior = () => {
+        messageEndRef.current?.scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest' })
+    }
+
+    useEffect(() => {
+        scrollBehavior()
+    }, [])
 
 
     return (
         <>
 
+            <div ref={messageEndRef}></div>
             <Topbar name='CATEGORIES' home='Categories' link='product1' />
 
             <div className="container-fluid pt-5 pb-3">
                 <div className="row">
                     <div className="col-10 offset-1">
                         <h3 className="fw-bold">SHOP WITH US</h3>
-                        <div className="p text-muted">Browse from --- latest items</div>
+                        <div className="p text-muted">Browse from {furniture?.length} latest items</div>
                     </div>
                 </div>
             </div>
@@ -157,14 +167,14 @@ export default function Product1() {
                     <div className="col-12 col-sm-6 col-md-8 col-lg-9 text-center mt-4 mt-sm-0">
                         <div className="row">
                             {
-                                product.map((elem, i) => {
+                                furniture.map((elem, i) => {
                                     return (
                                         <div className="col-12 col-md-6 col-lg-4 mt-3" key={i}>
-                                            <div className="card rounded-0 border-light w-100">
-                                                <img className="card-img-top" style={{ height: '10rem' }}
-                                                    src={elem.image} alt={elem.name} />
+                                            <div className="card rounded-0 w-100">
+                                                <Link to={`/product2/${elem.id}`}><img className="card-img-top rounded-0"
+                                                    style={{ height: '10rem' }} src={elem.image} alt={elem.name} /></Link>
                                                 <div className="card-body">
-                                                    <p className="card-text">{elem.description}</p>
+                                                    <p className="card-text txt-justify">{elem.description?.slice(0, 45)} ...</p>
                                                     <h5 className="card-title">{elem.price}</h5>
                                                 </div>
                                             </div>
@@ -172,11 +182,6 @@ export default function Product1() {
                                     )
                                 })
                             }
-                        </div>
-                        <div className="row text-center mt-3 mb-5">
-                            <div className="col">
-                                <button className='btn btn-outline-warning rounded-0'>DISCOVER MORE</button>
-                            </div>
                         </div>
                     </div>
                 </div>

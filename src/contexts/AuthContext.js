@@ -1,6 +1,7 @@
-import { onAuthStateChanged } from 'firebase/auth'
 import React, { createContext, useEffect, useReducer, useState } from 'react'
+
 import { auth } from '../config/firebase'
+import { onAuthStateChanged } from 'firebase/auth'
 
 export const AuthContext = createContext()
 const initialState = { isAuthenticated: false }

@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 export default function Topbar({ name, home, link }) {
-
     return (
         <>
 
@@ -18,9 +17,9 @@ export default function Topbar({ name, home, link }) {
 
                             <div className="row topbar-text">
                                 <div className="col">
-                                    <h1 className='fw-bold text-white'>{name}</h1>
+                                    <h1 className='fw-bold text-light'>{name}</h1>
                                     <Link className='link' to='/'>Home</Link><span className='px-2'>&gt;</span>
-                                    <Link className='link' to={`/${link}`}>{home}</Link>
+                                    <Link className='link text-danger' to={`/${link}`}>{home}</Link>
                                 </div>
                             </div>
 
