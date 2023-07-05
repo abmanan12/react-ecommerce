@@ -59,7 +59,7 @@ export default function ForgotPassword() {
                     </div>
                     <div className="row mt-4 text-end auth-button">
                       <div className="col">
-                        <button className='btn btn-warning px-3'>Send Link</button>
+                        <button className='btn btn-bg px-3'>Send Link</button>
                       </div>
                     </div>
 

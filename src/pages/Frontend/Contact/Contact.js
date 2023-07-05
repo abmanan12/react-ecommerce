@@ -59,7 +59,7 @@ export default function Contact() {
                         </div>
                         <div className="row mt-4 mb-5">
                             <div className="col">
-                                <button className='btn btn-outline-warning rounded-0 px-4 py-2'>SEND</button>
+                                <button className='btn btn-outline px-4 py-2'>SEND</button>
                             </div>
                         </div>
 

@@ -1,8 +1,19 @@
 import React, { useEffect, useRef } from 'react'
+
 import { Link } from 'react-router-dom'
 import Topbar from '../../../components/Header/Topbar'
+import { useCartContext } from '../../../contexts/CartContext'
+import FormatPrice from '../../../helpers/formatPrice'
 
 export default function Checkout() {
+
+  const { cart } = useCartContext()
+
+  let subTotal = cart?.map(curElem => curElem.price)
+  subTotal = subTotal?.reduce((accum, curVal) => accum + curVal, 0)
+
+  let shipping = subTotal / 10
+  let totalPrice = shipping + subTotal
 
   const messageEndRef = useRef()
   const scrollBehavior = () => {
@@ -54,7 +65,7 @@ export default function Checkout() {
 
                 <div className="row align-items-center">
                   <div className="col-12 col-sm-6">
-                    <button className='btn'>LOGIN</button>
+                    <button className='btn btn-bg'>LOGIN</button>
                   </div>
                   <div className="col-12 col-sm-6">
                     <span style={{ cursor: 'pointer' }}><Link className='link' to='/Auth/register'> Create an
@@ -77,7 +88,7 @@ export default function Checkout() {
             <div className="row">
               <div className="col">
                 <div className="border p-2 bg-light">
-                  <span className='ms-3 me-1'>Have a Coupon? </span><Link to='/Auth/login' className='link'>
+                  <span className='ms-3 me-1'>Have a Coupon? </span><Link to='/checkout' className='link'>
                     Click here to enter your code.</Link>
                 </div>
               </div>
@@ -91,7 +102,7 @@ export default function Checkout() {
 
             <div className="row ms-sm-3 mt-3">
               <div className="col">
-                <button className='btn p-2' style={{ width: '11rem' }}>APPLY COUPON</button>
+                <button className='btn btn-bg p-2' style={{ width: '11rem' }}>APPLY COUPON</button>
               </div>
             </div>
 
@@ -206,7 +217,7 @@ export default function Checkout() {
                       <h6>SUBTOTAL</h6>
                     </div>
                     <div className="col text-end">
-                      <p>---</p>
+                      <p>{<FormatPrice price={subTotal} />}</p>
                     </div>
                   </div>
                   <div className="row mt-2">
@@ -214,7 +225,7 @@ export default function Checkout() {
                       <h6>SHIPPING</h6>
                     </div>
                     <div className="col text-end">
-                      <p style={{ fontSize: '10px' }}>Flate Rate: ---</p>
+                      <p style={{ fontSize: '10px' }}>Flate Rate: {<FormatPrice price={shipping} />}</p>
                     </div>
                   </div>
                   <div className="row mt-2">
@@ -222,13 +233,13 @@ export default function Checkout() {
                       <h6>TOTAL</h6>
                     </div>
                     <div className="col text-end">
-                      <p>---</p>
+                      <p>{<FormatPrice price={totalPrice} />}</p>
                     </div>
                   </div>
 
                   <div className="row mt-2">
                     <div className="col">
-                      <input type="radio" id='payment' />
+                      <input type="radio" name='payment' id='payment' />
                       <label className='ms-2' htmlFor='payment'>CHECK PAYMENTS</label>
                     </div>
                   </div>
@@ -243,7 +254,7 @@ export default function Checkout() {
 
                   <div className="row mt-3">
                     <div className="col">
-                      <input type="radio" id='paypal' />
+                      <input type="radio" name='payment' id='paypal' />
                       <label className='ms-2' htmlFor='paypal'>PAYPAL</label>
                     </div>
                     <div className="col text-end">
@@ -267,7 +278,7 @@ export default function Checkout() {
                   </div>
                   <div className="row mt-4">
                     <div className="col">
-                      <button className='btn w-100' style={{ fontSize: '14px' }}>PROCEED TO PAYPAL</button>
+                      <button className='btn btn-bg w-100' style={{ fontSize: '14px' }}>PROCEED TO PAYPAL</button>
                     </div>
                   </div>
 

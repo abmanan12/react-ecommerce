@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import FormatPrice from '../../../helpers/formatPrice'
 
 export default function HeroCard({ description, price, link, id }) {
     return (
@@ -12,7 +13,7 @@ export default function HeroCard({ description, price, link, id }) {
                     <div className="card-body d-flex flex-column justify-content-between"
                         style={{ height: '10rem' }}>
                         <p className="card-text txt-justify">{description?.slice(0, 45)} ...</p>
-                        <h5 className="card-title">{price}</h5>
+                        <h5 className="card-title">{<FormatPrice price={price} />}</h5>
                     </div>
                 </div>
             </div>

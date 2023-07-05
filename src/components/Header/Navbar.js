@@ -6,9 +6,11 @@ import { ShoppingCart } from '@mui/icons-material';
 import { signOut } from 'firebase/auth';
 import { auth } from '../../config/firebase';
 import { AuthContext } from '../../contexts/AuthContext';
+import { useCartContext } from '../../contexts/CartContext';
 
 export default function Navbar() {
 
+    const { cart } = useCartContext()
     const { isAuthenticated, dispatch } = useContext(AuthContext)
 
     const handleLogout = () => {
@@ -64,7 +66,7 @@ export default function Navbar() {
                                 <NavLink to='/cart' className="nav-link">
                                     <span className="position-relative"><ShoppingCart style={{ fontSize: '1.4rem' }} />
                                         <span style={{ fontSize: '10px' }} className="position-absolute badge top-0  
-                                         translate-middle text-light rounded-pill bg-warning">2</span>
+                                         translate-middle text-light rounded-pill bg-warning">{cart?.length}</span>
                                     </span>
                                 </NavLink>
                             </li>

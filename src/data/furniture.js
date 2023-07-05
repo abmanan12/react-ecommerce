@@ -5,6 +5,9 @@ export const furniture = [
         "name": "Sofa",
         "category": "Sofa",
         "price": 999.99,
+        "size": 'large',
+        "color": 'black',
+        "time": 'day10',
         "description": "A comfortable sofa for lounging and relaxation.",
         "image": "https://images.pexels.com/photos/276583/pexels-photo-276583.jpeg?auto=compress&cs=tinysrgb&w=400"
     },
@@ -13,6 +16,9 @@ export const furniture = [
         "name": "Bed",
         "category": "Bed",
         "price": 1499.99,
+        "size": 'large',
+        "color": 'gold',
+        "time": 'today',
         "description": "A cozy bed for a good night's sleep.",
         "image": "https://images.pexels.com/photos/1571450/pexels-photo-1571450.jpeg?auto=compress&cs=tinysrgb&w=400"
     },
@@ -21,6 +27,9 @@ export const furniture = [
         "name": "Table",
         "category": "Table",
         "price": 299.99,
+        "size": 'medium',
+        "color": 'brown',
+        "time": 'day5',
         "description": "A sturdy table for various purposes.",
         "image": "https://images.pexels.com/photos/1826387/pexels-photo-1826387.jpeg?auto=compress&cs=tinysrgb&w=400"
     },
@@ -29,6 +38,9 @@ export const furniture = [
         "name": "Chair",
         "category": "Chair",
         "price": 149.99,
+        "size": 'medium',
+        "color": 'gold',
+        "time": 'day5',
         "description": "A comfortable chair for seating.",
         "image": "https://images.pexels.com/photos/116910/pexels-photo-116910.jpeg?auto=compress&cs=tinysrgb&w=400"
     },
@@ -37,6 +49,9 @@ export const furniture = [
         "name": "Decor",
         "category": "Decor",
         "price": 49.99,
+        "size": 'small',
+        "color": 'green',
+        "time": 'day5',
         "description": "Various decorative items to enhance your space.",
         "image": "https://images.pexels.com/photos/1005058/pexels-photo-1005058.jpeg?auto=compress&cs=tinysrgb&w=400"
     },
@@ -45,6 +60,9 @@ export const furniture = [
         "name": "Lighting",
         "category": "Lighting",
         "price": 79.99,
+        "size": 'large',
+        "color": 'gold',
+        "time": 'day2',
         "description": "Stylish lighting fixtures to brighten up your room.",
         "image": "https://images.pexels.com/photos/1123262/pexels-photo-1123262.jpeg?auto=compress&cs=tinysrgb&w=400"
     },
@@ -53,6 +71,9 @@ export const furniture = [
         "name": "Sectional Sofa",
         "category": "Sofa",
         "price": 1299.99,
+        "size": 'large',
+        "color": 'gold',
+        "time": 'today',
         "description": "A spacious sectional sofa for ample seating.",
         "image": "https://images.pexels.com/photos/276528/pexels-photo-276528.jpeg?auto=compress&cs=tinysrgb&w=400"
     },
@@ -61,6 +82,9 @@ export const furniture = [
         "name": "Platform Bed",
         "category": "Bed",
         "price": 899.99,
+        "size": 'medium',
+        "color": 'silver',
+        "time": 'day15',
         "description": "A modern platform bed for a contemporary bedroom.",
         "image": "https://images.pexels.com/photos/1034584/pexels-photo-1034584.jpeg?auto=compress&cs=tinysrgb&w=400"
     },
@@ -69,6 +93,9 @@ export const furniture = [
         "name": "Dining Table",
         "category": "Table",
         "price": 599.99,
+        "size": 'small',
+        "color": 'silver',
+        "time": 'today',
         "description": "A stylish dining table for gathering with family and friends.",
         "image": "https://images.pexels.com/photos/280471/pexels-photo-280471.jpeg?auto=compress&cs=tinysrgb&w=400"
     },
@@ -77,6 +104,9 @@ export const furniture = [
         "name": "Dining Chair",
         "category": "Chair",
         "price": 99.99,
+        "size": 'large',
+        "color": 'black',
+        "time": 'day10',
         "description": "Elegant dining chairs for comfortable seating during meals.",
         "image": "https://images.pexels.com/photos/2082090/pexels-photo-2082090.jpeg?auto=compress&cs=tinysrgb&w=400"
     },
@@ -85,6 +115,9 @@ export const furniture = [
         "name": "Bookshelf",
         "category": "Decor",
         "price": 199.99,
+        "size": 'small',
+        "color": 'green',
+        "time": 'day2',
         "description": "A spacious bookshelf to organize your book collection.",
         "image": "https://images.pexels.com/photos/834694/pexels-photo-834694.jpeg?auto=compress&cs=tinysrgb&w=400"
     },
@@ -93,6 +126,9 @@ export const furniture = [
         "name": "Floor Lamp",
         "category": "Lighting",
         "price": 119.99,
+        "size": 'medium',
+        "color": 'gold',
+        "time": 'day5',
         "description": "A tall floor lamp to provide ambient lighting.",
         "image": "https://images.pexels.com/photos/1612726/pexels-photo-1612726.jpeg?auto=compress&cs=tinysrgb&w=400"
     },
@@ -101,6 +137,9 @@ export const furniture = [
         "name": "Convertible Sofa",
         "category": "Sofa",
         "price": 899.99,
+        "size": 'small',
+        "color": 'silver',
+        "time": 'day2',
         "description": "A versatile convertible sofa that can be adjusted for sitting or sleeping.",
         "image": "https://images.pexels.com/photos/269218/pexels-photo-269218.jpeg?auto=compress&cs=tinysrgb&w=400"
     },
@@ -109,6 +148,9 @@ export const furniture = [
         "name": "Storage Bed",
         "category": "Bed",
         "price": 1199.99,
+        "size": 'medium',
+        "color": 'silver',
+        "time": 'day5',
         "description": "A bed with built-in storage drawers for extra convenience.",
         "image": "https://images.pexels.com/photos/262048/pexels-photo-262048.jpeg?auto=compress&cs=tinysrgb&w=400"
     },
@@ -117,6 +159,9 @@ export const furniture = [
         "name": "Coffee Table",
         "category": "Table",
         "price": 249.99,
+        "size": 'medium',
+        "color": 'gold',
+        "time": 'day2',
         "description": "A coffee table for placing beverages and other items.",
         "image": "https://images.pexels.com/photos/447592/pexels-photo-447592.jpeg?auto=compress&cs=tinysrgb&w=400"
     },
@@ -125,6 +170,9 @@ export const furniture = [
         "name": "Accent Chair",
         "category": "Chair",
         "price": 199.99,
+        "size": 'medium',
+        "color": 'silver',
+        "time": 'today',
         "description": "An eye-catching accent chair to add personality to your space.",
         "image": "https://images.pexels.com/photos/106839/pexels-photo-106839.jpeg?auto=compress&cs=tinysrgb&w=400"
     },
@@ -133,6 +181,9 @@ export const furniture = [
         "name": "Wall Art",
         "category": "Decor",
         "price": 79.99,
+        "size": 'medium',
+        "color": 'gold',
+        "time": 'day10',
         "description": "Artistic wall decor to enhance your room's aesthetics.",
         "image": "https://images.pexels.com/photos/1090638/pexels-photo-1090638.jpeg?auto=compress&cs=tinysrgb&w=400"
     },
@@ -141,6 +192,9 @@ export const furniture = [
         "name": "Pendant Light",
         "category": "Lighting",
         "price": 89.99,
+        "size": 'small',
+        "color": 'gold',
+        "time": 'day10',
         "description": "A stylish pendant light to add a focal point to your space.",
         "image": "https://images.pexels.com/photos/945669/pexels-photo-945669.jpeg?auto=compress&cs=tinysrgb&w=400"
     },
@@ -149,6 +203,9 @@ export const furniture = [
         "name": "Leather Sofa",
         "category": "Sofa",
         "price": 1699.99,
+        "size": 'medium',
+        "color": 'black',
+        "time": 'day15',
         "description": "A luxurious leather sofa for a touch of elegance.",
         "image": "https://images.pexels.com/photos/6933860/pexels-photo-6933860.jpeg?auto=compress&cs=tinysrgb&w=400"
     },
@@ -157,7 +214,10 @@ export const furniture = [
         "name": "Canopy Bed",
         "category": "Bed",
         "price": 1499.99,
-        "description": "A canopy bed for a romantic and cozy atmosphere.",
+        "size": 'medium',
+        "color": 'black',
+        "time": 'day10',
+        "description": "A canopy a romantic and cozy atmosphere.",
         "image": "https://images.pexels.com/photos/1743229/pexels-photo-1743229.jpeg?auto=compress&cs=tinysrgb&w=400"
     },
     {
@@ -165,6 +225,9 @@ export const furniture = [
         "name": "Writing Desk",
         "category": "Table",
         "price": 349.99,
+        "size": 'large',
+        "color": 'brown',
+        "time": 'day15',
         "description": "A functional writing desk for work or study.",
         "image": "https://images.pexels.com/photos/276651/pexels-photo-276651.jpeg?auto=compress&cs=tinysrgb&w=400"
     },
@@ -173,6 +236,9 @@ export const furniture = [
         "name": "Armchair",
         "category": "Chair",
         "price": 249.99,
+        "size": 'large',
+        "color": 'gold',
+        "time": 'day2',
         "description": "An elegant armchair for comfortable seating.",
         "image": "https://images.pexels.com/photos/1366875/pexels-photo-1366875.jpeg?auto=compress&cs=tinysrgb&w=400"
     },
@@ -181,6 +247,9 @@ export const furniture = [
         "name": "Wall Shelf",
         "category": "Decor",
         "price": 59.99,
+        "size": 'large',
+        "color": 'gold',
+        "time": 'day15',
         "description": "A wall shelf for displaying your favorite decor items.",
         "image": "https://images.pexels.com/photos/3932930/pexels-photo-3932930.jpeg?auto=compress&cs=tinysrgb&w=400"
     },
@@ -189,6 +258,9 @@ export const furniture = [
         "name": "Chandelier",
         "category": "Lighting",
         "price": 299.99,
+        "size": 'large',
+        "color": 'silver',
+        "time": 'today',
         "description": "A stunning chandelier to add a touch of glamour to your space.",
         "image": "https://images.pexels.com/photos/1668860/pexels-photo-1668860.jpeg?auto=compress&cs=tinysrgb&w=400"
     },
@@ -197,6 +269,9 @@ export const furniture = [
         "name": "Recliner Sofa",
         "category": "Sofa",
         "price": 1199.99,
+        "size": 'medium',
+        "color": 'silver',
+        "time": 'day10',
         "description": "A cozy recliner sofa for ultimate relaxation.",
         "image": "https://images.pexels.com/photos/3757055/pexels-photo-3757055.jpeg?auto=compress&cs=tinysrgb&w=400"
     },
@@ -205,6 +280,9 @@ export const furniture = [
         "name": "Bookcase",
         "category": "Decor",
         "price": 299.99,
+        "size": 'large',
+        "color": 'green',
+        "time": 'today',
         "description": "A spacious bookcase to showcase your book collection.",
         "image": "https://images.pexels.com/photos/3076899/pexels-photo-3076899.jpeg?auto=compress&cs=tinysrgb&w=400"
     },
@@ -213,6 +291,9 @@ export const furniture = [
         "name": "Desk Lamp",
         "category": "Lighting",
         "price": 39.99,
+        "size": 'medium',
+        "color": 'silver',
+        "time": 'day15',
         "description": "A compact desk lamp for focused task lighting.",
         "image": "https://images.pexels.com/photos/568290/pexels-photo-568290.jpeg?auto=compress&cs=tinysrgb&w=400"
     },
@@ -221,6 +302,9 @@ export const furniture = [
         "name": "L-Shaped Sofa",
         "category": "Sofa",
         "price": 1499.99,
+        "size": 'large',
+        "color": 'silver',
+        "time": 'day5',
         "description": "An L-shaped sofa for versatile seating options.",
         "image": "https://images.pexels.com/photos/6980714/pexels-photo-6980714.jpeg?auto=compress&cs=tinysrgb&w=400"
     },
@@ -229,6 +313,9 @@ export const furniture = [
         "name": "Bunk Bed",
         "category": "Bed",
         "price": 899.99,
+        "size": 'small',
+        "color": 'black',
+        "time": 'day2',
         "description": "A space-saving bunk bed for shared bedrooms.",
         "image": "https://images.pexels.com/photos/3356708/pexels-photo-3356708.jpeg?auto=compress&cs=tinysrgb&w=400"
     },
@@ -237,6 +324,9 @@ export const furniture = [
         "name": "Console Table",
         "category": "Table",
         "price": 199.99,
+        "size": 'large',
+        "color": 'silver',
+        "time": 'day10',
         "description": "A sleek console table for entryways or living rooms.",
         "image": "https://images.pexels.com/photos/260928/pexels-photo-260928.jpeg?auto=compress&cs=tinysrgb&w=400"
     }

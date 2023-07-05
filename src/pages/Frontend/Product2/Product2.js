@@ -1,16 +1,19 @@
 import React, { useEffect, useRef } from 'react'
 
 import { FaStar } from "react-icons/fa";
-import { FiPlus } from 'react-icons/fi';
-import { HiMinusSm } from 'react-icons/hi';
+// import { FiPlus } from 'react-icons/fi';
+// import { HiMinusSm } from 'react-icons/hi';
 
 import { furniture } from '../../../data/furniture';
 import Topbar from '../../../components/Header/Topbar';
 import { Link, useParams } from 'react-router-dom';
+import FormatPrice from '../../../helpers/formatPrice';
+import { useCartContext } from '../../../contexts/CartContext';
 
 export default function Product2() {
 
     let id = useParams().id
+    const { addToCart } = useCartContext()
 
     let singleProduct = furniture?.find(curElem => {
         return curElem.id === id
@@ -66,7 +69,7 @@ export default function Product2() {
 
                             <div className="col">
                                 <h4 className='fw-bold'>{name}</h4>
-                                <h4 className='fw-bold text-warning'>{price}</h4>
+                                <h4 className='fw-bold text-warning'><FormatPrice price={price} /></h4>
                             </div>
                             <div className="row mt-2" style={{ fontSize: '14px' }}>
                                 <div className="col">
@@ -84,16 +87,17 @@ export default function Product2() {
                                     <p className='txt-justify' style={{ fontSize: '15px' }}>{description}</p>
                                 </div>
                             </div>
-                            <div className="row mt-3">
+                            {/* <div className="row mt-3">
                                 <div className="col">
                                     <div className='product2-addbtn content-center p-1'>
                                         <span><HiMinusSm /></span><span className='mx-3'>1</span><span><FiPlus /></span>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
                             <div className="row mt-4">
                                 <div className="col">
-                                    <Link to='/cart' className='btn rounded-0 text-white bg-warning'>ADD TO CART</Link>
+                                    <Link to='/cart' className='btn btn-bg' onClick={() => { addToCart(singleProduct) }}>
+                                        ADD TO CART</Link>
                                 </div>
                             </div>
 
@@ -199,7 +203,7 @@ export default function Product2() {
 
                         <div className="row mt-3 text-end">
                             <div className="col">
-                                <button className='btn rounded-0 text-white bg-warning'>Submit Now</button>
+                                <button className='btn btn-bg'>Submit Now</button>
                             </div>
                         </div>
                     </div>

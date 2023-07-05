@@ -75,16 +75,17 @@ export default function Login() {
                                                 <label htmlFor='login' className='ms-2'>keep me logged in</label>
                                             </div>
                                             <div className="col-12 col-sm-5 text-start mt-2 mt-sm-0 text-sm-end ms-3 ms-sm-0">
-                                                <Link to='/Auth/forgot-password'>Forgot Password?</Link>
+                                                <Link to='/Auth/forgot-password' className='text-warning'>Forgot Password?</Link>
                                             </div>
                                         </div>
 
                                         <div className="row mt-4 mt-sm-5 auth-button">
                                             <div className="col-12 col-sm-8">
-                                                <p>Don't have an account? <Link to='/Auth/register'>Sign Up</Link> here</p>
+                                                <p>Don't have an account? <Link to='/Auth/register' className='text-warning'>
+                                                    Sign Up</Link> here</p>
                                             </div>
                                             <div className="col-12 col-sm-4 mt-2 mt-sm-0 text-end">
-                                                <button className='btn btn-warning px-4'>Login</button>
+                                                <button className='btn btn-bg px-4'>Login</button>
                                             </div>
                                         </div>
 

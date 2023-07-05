@@ -40,7 +40,7 @@ export default function Product() {
                             <button className='btn border-0 fw-bold' onClick={() => { filterProduct('Table') }}>Table</button>
                             <button className='btn border-0 fw-bold' onClick={() => { filterProduct('Chair') }}>Chair</button>
                             <button className='btn border-0 fw-bold' onClick={() => { filterProduct('Bed') }}>Bed</button>
-                            <button className='btn border-0 fw-bold' onClick={() => { filterProduct('Lighting') }}>Lightning</button>
+                            <button className='btn border-0 fw-bold' onClick={() => { filterProduct('Lighting') }}>Lighting</button>
                             <button className='btn border-0 fw-bold' onClick={() => { filterProduct('Decor') }}>Decor</button>
                             <button className='btn border-0 fw-bold' onClick={() => { setProduct(furniture) }}>All</button>
                         </div>
@@ -53,7 +53,7 @@ export default function Product() {
             <div className="container-fluid content-center py-4">
                 <div className="row text-center product-width px-2 px-sm-3 px-md-4 px-lg-5">
                     {
-                        product?.slice(0, 15).map((elem, i) => {
+                        product?.slice(0, 8).map((elem, i) => {
                             return (
                                 <HeroCard key={i} description={elem.description} price={elem.price} link={elem.image} id={elem.id} />
                             )
@@ -65,7 +65,7 @@ export default function Product() {
             <div className="container-fluid">
                 <div className="row text-center mb-5">
                     <div className="col">
-                        <Link to='/product1' className='btn btn-outline-warning rounded-0'>DISCOVER MORE</Link>
+                        <Link to='/product1' className='btn btn-outline'>DISCOVER MORE</Link>
                     </div>
                 </div>
             </div>

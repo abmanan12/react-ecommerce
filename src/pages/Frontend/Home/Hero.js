@@ -20,8 +20,7 @@ export default function Hero() {
                     <h3 className='fw-bold'>FURNITURE AT COST</h3>
                     <p className='text-muted txt-justify'>Suspendisse varius enim in eros elementum
                       tristique. Duis cursus, mi quis viverra ornare, eros dollar interdum nulla.</p>
-                    <Link to='/product1' className='btn btn-warning text-white btn-sm py-2 rounded-0'>
-                      DISCOVER MORE</Link>
+                    <Link to='/about' className='btn btn-bg btn-sm py-2'>DISCOVER MORE</Link>
 
                   </div>
                 </div>
@@ -62,7 +61,7 @@ export default function Hero() {
 
         <div className="row text-center my-3">
           <div className="col">
-            <Link to='/product1' className='btn btn-outline-warning rounded-0'>DISCOVER MORE</Link>
+            <Link to='/product1' className='btn btn-outline'>DISCOVER MORE</Link>
           </div>
         </div>
 
@@ -86,7 +85,7 @@ export default function Hero() {
                   quis viverra ornare, eros dollar interdum nulla.</p>
                 <p className='txt-justify'>Suspendisse varius enim in eros elementum tristique. Duis cursus, mi
                   quis viverra ornare, eros dollar interdum nulla.</p>
-                <Link to='/product1' className='btn btn-warning text-white rounded-0'>DISCOVER MORE</Link>
+                <Link to='/product1' className='btn btn-bg'>DISCOVER MORE</Link>
               </div>
 
             </div>
@@ -125,7 +124,7 @@ export default function Hero() {
 
         <div className="row text-center my-3">
           <div className="col">
-            <Link to='/product1' className='btn btn-outline-warning rounded-0'>DISCOVER MORE</Link>
+            <Link to='/product1' className='btn btn-outline'>DISCOVER MORE</Link>
           </div>
         </div>
 
@@ -164,7 +163,7 @@ export default function Hero() {
 
         <div className="row text-center my-3">
           <div className="col">
-            <Link to='/product1' className='btn btn-outline-warning rounded-0'>DISCOVER MORE</Link>
+            <Link to='/product1' className='btn btn-outline'>DISCOVER MORE</Link>
           </div>
         </div>
 

@@ -13,7 +13,7 @@ export default function Instra() {
                         <h3 className='fw-bold mt-4'>GET INSPIRED WITH INSTRAGRAM</h3>
                         <p className='txt-justify'>Suspendisse varius enim in eros elementum tristique. Duis cursus, mi
                             quis viverra ornare, eros dollar interdum nulla.</p>
-                            <Link to='/product1' className='btn btn-warning text-white rounded-0'>DISCOVER MORE</Link>
+                            <Link to='/product1' className='btn btn-bg'>DISCOVER MORE</Link>
 
                     </div>
                     <div className="col-12 col-md-6  col-lg-4 p-0">

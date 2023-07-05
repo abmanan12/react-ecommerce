@@ -66,14 +66,14 @@ export default function Register() {
                       <div className="col">
                         <label htmlFor="name">Full Name</label>
                         <input type="text" className='form-control shadow-none' name='fullName' id='name'
-                        placeholder='Enter full name' onChange={handleChange} />
+                          placeholder='Enter full name' onChange={handleChange} />
                       </div>
                     </div>
                     <div className="row auth-input mt-3">
                       <div className="col">
                         <label htmlFor="email">Email Address</label>
                         <input type="text" className='form-control shadow-none' name='emailAddress' id='email'
-                        placeholder='Enter email address' onChange={handleChange} />
+                          placeholder='Enter email address' onChange={handleChange} />
                       </div>
                     </div>
                     <div className="row auth-input mt-3">
@@ -93,10 +93,11 @@ export default function Register() {
 
                     <div className="row mt-4 auth-button">
                       <div className="col-12 col-sm-8">
-                        <p>Already have an account? <Link to='/Auth/login'>Login</Link> here</p>
+                        <p>Already have an account? <Link to='/Auth/login' className='text-warning'>
+                          Login</Link> here</p>
                       </div>
                       <div className="col-12 col-sm-4 mt-2 mt-sm-0 text-end">
-                        <button className='btn btn-warning px-3'>Sign Up</button>
+                        <button className='btn btn-bg px-3'>Sign Up</button>
                       </div>
                     </div>
 

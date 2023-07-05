@@ -23,7 +23,7 @@ export default function Footer() {
             </div>
 
 
-            <footer style={{ backgroundColor: '#F2E1D9' }}>
+            <footer className='bg-danger'>
                 <div className="text-center text-lg-start bg-dark text-muted pt-3" style={{ marginLeft: '16px' }}>
 
                     <div className="container text-center text-md-start mt-5">
