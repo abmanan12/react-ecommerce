@@ -72,7 +72,7 @@ export default function Hero() {
         <div className="row">
 
           <div className="col-12 col-md-6 p-0">
-            <img src="/images/backgroundImg.jpg" alt="Background-Img" />
+            <img src="https://wallpaperaccess.com/full/2076086.jpg" alt="network_issue" />
           </div>
 
           <div className="col-12 col-md-6">
