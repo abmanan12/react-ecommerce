@@ -1,10 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { AiOutlineHome } from 'react-icons/ai';
 import { CiMobile4 } from 'react-icons/ci';
 import { BiMessageDetail } from 'react-icons/bi';
 import Topbar from '../../../components/Header/Topbar';
 
+const initialState = {
+    message: '',
+    userName: '',
+    email: '',
+    subject: ''
+}
+
 export default function Contact() {
+
+    const [state, setState] = useState(initialState)
+
+    const handleChange = e => {
+        setState(s => ({ ...s, [e.target.name]: e.target.value }))
+    }
+
+    const handleSubmit = () => {
+        setState(initialState)
+    }
+
     return (
         <>
 
@@ -40,26 +58,33 @@ export default function Contact() {
 
                         <div className="row pt-2">
                             <div className="col">
-                                <textarea style={{ resize: 'none' }} className='form-control text-muted'
-                                    rows="6" placeholder='Enter Message'></textarea>
+                                <textarea style={{ resize: 'none' }} name='message' value={state.message} onChange={handleChange}
+                                    className='form-control text-muted' rows="6" placeholder='Enter Message'></textarea>
                             </div>
                         </div>
+
                         <div className="row my-3">
                             <div className="col-12 col-sm-6">
-                                <input type="text" className='form-control text-muted' placeholder='Enter your name' />
+                                <input type="text" name='userName' value={state.userName} className='form-control text-muted'
+                                    onChange={handleChange} placeholder='Enter your name' />
                             </div>
+
                             <div className="col-12 mt-3 mt-sm-0 col-sm-6">
-                                <input type="email" className='form-control text-muted' placeholder='Email' />
+                                <input type="email" name='email' value={state.email} className='form-control text-muted'
+                                    onChange={handleChange} placeholder='Email' />
                             </div>
                         </div>
+
                         <div className="row">
                             <div className="col">
-                                <input type="text" className='form-control text-muted' placeholder='Enter Subject' />
+                                <input type="text" name='subject' value={state.subject} className='form-control text-muted'
+                                    onChange={handleChange} placeholder='Enter Subject' />
                             </div>
                         </div>
+
                         <div className="row mt-4 mb-5">
                             <div className="col">
-                                <button className='btn btn-outline px-4 py-2'>SEND</button>
+                                <button className='btn btn-outline px-4 py-2' onClick={handleSubmit}>SEND</button>
                             </div>
                         </div>
 
@@ -72,24 +97,29 @@ export default function Contact() {
                             <div className="text-muted contact-icon">
                                 <AiOutlineHome />
                             </div>
+
                             <div>
                                 <h6 className='mb-0 text-muted'>Buttonwood, California</h6>
                                 <p className='mb-0 text-muted'>Rosemead, CA 91770</p>
                             </div>
                         </div>
+
                         <div className="d-flex align-items-center my-4">
                             <div className="text-muted contact-icon">
                                 <CiMobile4 />
                             </div>
+
                             <div>
                                 <h6 className='mb-0 text-muted'>+1 253  565 2365</h6>
                                 <p className='mb-0 text-muted'>Mon to Fri 9am to 6pm</p>
                             </div>
                         </div>
+
                         <div className="d-flex align-items-center">
                             <div className="text-muted contact-icon">
                                 <BiMessageDetail />
                             </div>
+
                             <div>
                                 <h6 className='mb-0 text-muted'>support@ourweb.com</h6>
                                 <p className='mb-0 text-muted'>Send us your query anytime!</p>

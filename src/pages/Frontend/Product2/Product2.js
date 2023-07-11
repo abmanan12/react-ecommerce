@@ -71,22 +71,26 @@ export default function Product2() {
                                 <h4 className='fw-bold'>{name}</h4>
                                 <h4 className='fw-bold text-warning'><FormatPrice price={price} /></h4>
                             </div>
+
                             <div className="row mt-2" style={{ fontSize: '14px' }}>
                                 <div className="col">
                                     <span>Category:</span><span className='ms-3 text-warning'>Household</span>
                                 </div>
                             </div>
+
                             <div className="row" style={{ fontSize: '14px' }}>
                                 <div className="col">
                                     <span>Availabilty:</span><span className='ms-3 text-warning'>In Stock</span>
                                     <hr className='w-75 mt-3' />
                                 </div>
                             </div>
+
                             <div className="row">
                                 <div className="col">
                                     <p className='txt-justify' style={{ fontSize: '15px' }}>{description}</p>
                                 </div>
                             </div>
+
                             {/* <div className="row mt-3">
                                 <div className="col">
                                     <div className='product2-addbtn content-center p-1'>
@@ -94,6 +98,7 @@ export default function Product2() {
                                     </div>
                                 </div>
                             </div> */}
+
                             <div className="row mt-4">
                                 <div className="col">
                                     <Link to='/cart' className='btn btn-bg' onClick={() => { addToCart(singleProduct) }}>
@@ -109,6 +114,13 @@ export default function Product2() {
 
 
             <div className="container my-5">
+
+                <div className="row mb-3">
+                    <div className="col">
+                        <span style={{ color: 'red', fontSize: '14px' }}>Note: Reviews Method is Under Development</span>
+                    </div>
+                </div>
+
                 <div className="row product2-reviews px-3 px-md-0">
 
                     <div className="col-12 col-md-6">
@@ -120,6 +132,7 @@ export default function Product2() {
                                     <p className='mb-0'>(03 Reviews)</p>
                                 </div>
                             </div>
+
                             <div className="col-12 col-sm-6 my-3 my-sm-0 review-center">
                                 <h6 className='fw-bold'>Based on 3 Reviews</h6>
                                 <p className='stars'>5 Star <span className='mx-1'>{ratingStar}</span> 01</p>
@@ -137,6 +150,7 @@ export default function Product2() {
                                 <p className='stars'><span>{ratingStar}</span></p>
                             </div>
                         </div>
+
                         <div className="row">
                             <div className="col">
                                 <p className='txt-justify pt-2'>Lorem ipsum dolor sit amet consectetur, adipisicing
@@ -152,6 +166,7 @@ export default function Product2() {
                                 <p className='stars'><span>{ratingStar}</span></p>
                             </div>
                         </div>
+
                         <div className="row">
                             <div className="col">
                                 <p className='txt-justify pt-2'>Lorem ipsum dolor sit amet consectetur, adipisicing
@@ -167,6 +182,7 @@ export default function Product2() {
                                 <p className='stars'><span>{ratingStar}</span></p>
                             </div>
                         </div>
+
                         <div className="row">
                             <div className="col">
                                 <p className='txt-justify pt-2'>Lorem ipsum dolor sit amet consectetur, adipisicing
@@ -193,9 +209,9 @@ export default function Product2() {
 
                         <div className="row">
                             <div className="col">
-                                <input type="text" className='form-control' placeholder='Your Full Name' />
-                                <input type="email" className='form-control' placeholder='Email Address' />
-                                <input type="text" className='form-control' placeholder='Phone Number' />
+                                <input type="text" className='form-control py-2' placeholder='Your Full Name' />
+                                <input type="email" className='form-control py-2' placeholder='Email Address' />
+                                <input type="text" className='form-control py-2' placeholder='Phone Number' />
                                 <textarea name="review" style={{ resize: 'none' }} className='form-control'
                                     placeholder='Review' rows="3"></textarea>
                             </div>

@@ -1,7 +1,8 @@
-import { sendPasswordResetEmail } from 'firebase/auth'
 import React, { useState } from 'react'
+
 import { useNavigate } from 'react-router-dom'
 import { auth } from '../../../config/firebase'
+import { sendPasswordResetEmail } from 'firebase/auth'
 
 const initialState = {
   email: ''
@@ -9,8 +10,9 @@ const initialState = {
 
 export default function ForgotPassword() {
 
-  const [state, setState] = useState(initialState)
   const Navigator = useNavigate()
+  const [state, setState] = useState(initialState)
+  const [isProcessing, setIsProcessing] = useState(false)
 
   const handleChange = e => {
     setState(s => ({ ...s, [e.target.name]: e.target.value }))
@@ -18,13 +20,16 @@ export default function ForgotPassword() {
 
   const handleSubmit = e => {
     e.preventDefault()
+    setIsProcessing(true)
 
     sendPasswordResetEmail(auth, state.email)
       .then(() => {
         alert('Password reset email sent!')
+        setIsProcessing(false)
         Navigator('/auth/login')
       })
       .catch((error) => {
+        setIsProcessing(false)
         console.log(error.code)
         console.log(error.message)
       });
@@ -57,9 +62,15 @@ export default function ForgotPassword() {
                           name='email' placeholder='Email address' onChange={handleChange} />
                       </div>
                     </div>
+
                     <div className="row mt-4 text-end auth-button">
                       <div className="col">
-                        <button className='btn btn-bg px-3'>Send Link</button>
+                        <button className='btn btn-bg px-3' disabled={isProcessing}>
+                          {!isProcessing
+                            ? 'Send Link'
+                            : <div className='spinner-grow spinner-grow-sm'></div>
+                          }
+                        </button>
                       </div>
                     </div>
 

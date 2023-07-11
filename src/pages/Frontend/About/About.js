@@ -13,10 +13,10 @@ export default function About() {
         <div className="container content-center">
           <div className="row about-width">
             <div className="col">
-              <p className='text-muted txt-justify'>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Doloribus fuga molestiae sint adipisci, consequatur, earum nisi optio necessitatibus hic error assumenda sed modi
-                repudiandae repellat enim, blanditiis odit nobis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
-                repellendus possimus, alias sit ipsam aspernatur esse deserunt doloremque.</p>
+              <p className='text-muted txt-justify'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+                fuga molestiae sint adipisci, consequatur, earum nisi optio necessitatibus hic error assumenda sed modi
+                repudiandae repellat enim, blanditiis odit nobis. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Consequatur repellendus possimus, alias sit ipsam aspernatur esse deserunt doloremque.</p>
             </div>
           </div>
         </div>
@@ -35,10 +35,10 @@ export default function About() {
           <div className="row about-width">
             <div className="col">
               <h2 className='fw-bold mb-3'>JOURNEY START FROM</h2>
-              <p className='text-muted txt-justify'>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Doloribus fuga molestiae sint adipisci, consequatur, earum nisi optio necessitatibus hic error assumenda sed modi
-                repudiandae repellat enim, blanditiis odit nobis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
-                repellendus possimus, alias sit ipsam aspernatur esse deserunt doloremque.</p>
+              <p className='text-muted txt-justify'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+                fuga molestiae sint adipisci, consequatur, earum nisi optio necessitatibus hic error assumenda sed modi
+                repudiandae repellat enim, blanditiis odit nobis. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Consequatur repellendus possimus, alias sit ipsam aspernatur esse deserunt doloremque.</p>
             </div>
           </div>
         </div>
@@ -57,10 +57,10 @@ export default function About() {
           <div className="row about-width">
             <div className="col">
               <h2 className='fw-bold mb-3'>2023</h2>
-              <p className='text-muted txt-justify'>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Doloribus fuga molestiae sint adipisci, consequatur, earum nisi optio necessitatibus hic error assumenda sed modi
-                repudiandae repellat enim, blanditiis odit nobis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
-                repellendus possimus, alias sit ipsam aspernatur esse deserunt doloremque.</p>
+              <p className='text-muted txt-justify'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+                fuga molestiae sint adipisci, consequatur, earum nisi optio necessitatibus hic error assumenda sed modi
+                repudiandae repellat enim, blanditiis odit nobis. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Consequatur repellendus possimus, alias sit ipsam aspernatur esse deserunt doloremque.</p>
             </div>
           </div>
         </div>

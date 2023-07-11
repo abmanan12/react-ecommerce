@@ -81,8 +81,10 @@ export default function Hero() {
               <div className="col">
                 <h1 className='fw-bold'>BEST FURNITURE</h1>
                 <h1 className='fw-bold'>MANUFACTURER</h1>
+
                 <p className='txt-justify'>Suspendisse varius enim in eros elementum tristique. Duis cursus, mi
                   quis viverra ornare, eros dollar interdum nulla.</p>
+
                 <p className='txt-justify'>Suspendisse varius enim in eros elementum tristique. Duis cursus, mi
                   quis viverra ornare, eros dollar interdum nulla.</p>
                 <Link to='/product1' className='btn btn-bg'>DISCOVER MORE</Link>

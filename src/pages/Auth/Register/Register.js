@@ -12,8 +12,9 @@ const initialState = {
 
 export default function Register() {
 
-  const [state, setState] = useState(initialState)
   const Navigator = useNavigate()
+  const [state, setState] = useState(initialState)
+  const [isProcessing, setIsProcessing] = useState(false)
 
   const handleChange = e => {
     setState(s => ({ ...s, [e.target.name]: e.target.value }))
@@ -21,6 +22,8 @@ export default function Register() {
 
   const handleSubmit = e => {
     e.preventDefault()
+
+    setIsProcessing(true)
     const { fullName, emailAddress, password } = state
 
     createUserWithEmailAndPassword(auth, emailAddress, password)
@@ -34,10 +37,12 @@ export default function Register() {
             alert('Email verification sent!')
           });
 
+        setIsProcessing(false)
         Navigator('/')
 
       })
       .catch((error) => {
+        setIsProcessing(false)
         console.log(error.message)
       });
 
@@ -69,6 +74,7 @@ export default function Register() {
                           placeholder='Enter full name' onChange={handleChange} />
                       </div>
                     </div>
+
                     <div className="row auth-input mt-3">
                       <div className="col">
                         <label htmlFor="email">Email Address</label>
@@ -76,6 +82,7 @@ export default function Register() {
                           placeholder='Enter email address' onChange={handleChange} />
                       </div>
                     </div>
+
                     <div className="row auth-input mt-3">
                       <div className="col">
                         <label htmlFor="password">Password</label>
@@ -83,6 +90,7 @@ export default function Register() {
                           placeholder='Enter Password' onChange={handleChange} />
                       </div>
                     </div>
+
                     <div className="row auth-input mt-3">
                       <div className="col">
                         <label htmlFor="c-password">Confirm Password</label>
@@ -96,8 +104,14 @@ export default function Register() {
                         <p>Already have an account? <Link to='/Auth/login' className='text-warning'>
                           Login</Link> here</p>
                       </div>
+
                       <div className="col-12 col-sm-4 mt-2 mt-sm-0 text-end">
-                        <button className='btn btn-bg px-3'>Sign Up</button>
+                        <button className='btn btn-bg px-3' disabled={isProcessing}>
+                          {!isProcessing
+                            ? 'Sign Up'
+                            : <div className='spinner-grow spinner-grow-sm'></div>
+                          }
+                        </button>
                       </div>
                     </div>
 

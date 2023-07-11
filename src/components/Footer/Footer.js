@@ -30,8 +30,13 @@ export default function Footer() {
                         <div className="row mt-3">
 
                             <div className="col-md-3 col-lg-5 col-xl-4 mx-auto mb-4 px-lg-4">
-                                <h6 className="fw-bold mb-4 mb-md-2 mb-lg-4"><img src="/images/logo2.png" alt="Logo" width="60" height="60" /></h6>
-                                <p>Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dollar interdum nulla.</p>
+
+                                <h6 className="fw-bold mb-4 mb-md-2 mb-lg-4"><img src="/images/logo2.png"
+                                    alt="Logo" width="60" height="60" /></h6>
+
+                                <p>Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare,
+                                    eros dollar interdum nulla.</p>
+
                                 <div className="col mt-5">
                                     <Link className="btn btn-outline-light btn-floating me-2" role="button"><AiOutlineTwitter /></Link>
                                     <Link className="btn btn-outline-light btn-floating me-2" role="button"><FaFacebookF /></Link>

@@ -18,7 +18,9 @@ export default function Topbar({ name, home, link }) {
                             <div className="row topbar-text">
                                 <div className="col">
                                     <h1 className='fw-bold text-light'>{name}</h1>
+
                                     <Link className='link' to='/'>Home</Link><span className='px-2'>&gt;</span>
+
                                     <Link className='link text-danger' to={`/${link}`}>{home}</Link>
                                 </div>
                             </div>

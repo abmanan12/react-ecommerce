@@ -1,9 +1,11 @@
 import React, { useEffect, useRef } from 'react'
-import Topbar from '../../../components/Header/Topbar'
+
 import { FaTrash } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
-import { useCartContext } from '../../../contexts/CartContext'
+
+import Topbar from '../../../components/Header/Topbar'
 import FormatPrice from '../../../helpers/formatPrice'
+import { useCartContext } from '../../../contexts/CartContext'
 
 export default function Cart() {
 
@@ -17,6 +19,10 @@ export default function Cart() {
     useEffect(() => {
         scrollBehavior()
     }, [])
+
+    if (!cart?.length) {
+        return <h6 className='content-center text-muted' style={{ height: '30vh' }}>No Item in Cart</h6>
+    }
 
     return (
         <>
@@ -37,6 +43,7 @@ export default function Cart() {
                     <div className="col">
                         <div className="table-responsive">
                             <table className="table table-light table-bordered text-center">
+
                                 <thead>
                                     <tr>
                                         <th scope="col">Product</th>
@@ -45,24 +52,28 @@ export default function Cart() {
                                         <th scope="col">Remove</th>
                                     </tr>
                                 </thead>
+
                                 <tbody>
-                                    {
-                                        cart?.map((curElem, i) => {
-                                            return (
-                                                <tr className='align-middle' key={i}>
-                                                    <td className='content-center'>
-                                                        <img src={curElem.image} alt={curElem.name} width={60} />
-                                                    </td>
-                                                    <td>{curElem.name}</td>
-                                                    <td>{<FormatPrice price={curElem.price} />}</td>
-                                                    <td onClick={() => removeItem(curElem.id)}>
-                                                        <FaTrash className='text-warning' />
-                                                    </td>
-                                                </tr>
-                                            )
-                                        })
+                                    {cart?.map((curElem, i) => {
+                                        return (
+                                            <tr className='align-middle' key={i}>
+                                                <td className='content-center'>
+                                                    <img src={curElem.image} alt={curElem.name} width={60} />
+                                                </td>
+
+                                                <td>{curElem.name}</td>
+
+                                                <td>{<FormatPrice price={curElem.price} />}</td>
+
+                                                <td onClick={() => removeItem(curElem.id)}>
+                                                    <FaTrash className='text-warning' />
+                                                </td>
+                                            </tr>
+                                        )
+                                    })
                                     }
                                 </tbody>
+
                             </table>
                         </div>
                     </div>

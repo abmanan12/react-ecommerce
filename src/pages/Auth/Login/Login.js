@@ -10,8 +10,9 @@ const initialState = {
 
 export default function Login() {
 
-    const [state, setState] = useState(initialState)
     const navigate = useNavigate()
+    const [state, setState] = useState(initialState)
+    const [isProcessing, setIsProcessing] = useState(false)
 
     const handleChange = e => {
         setState(s => ({ ...s, [e.target.name]: e.target.value }))
@@ -19,6 +20,8 @@ export default function Login() {
 
     const handleSubmit = e => {
         e.preventDefault()
+
+        setIsProcessing(true)
         const { userName, password } = state
 
         signInWithEmailAndPassword(auth, userName, password)
@@ -26,9 +29,11 @@ export default function Login() {
                 const user = userCredential.user;
                 console.log(user)
                 console.log('User Loggin In')
+                setIsProcessing(false)
                 navigate('/')
             })
             .catch((error) => {
+                setIsProcessing(false)
                 console.log(error.code)
                 console.log(error.message)
             });
@@ -61,6 +66,7 @@ export default function Login() {
                                                     name='userName' placeholder='Email address' onChange={handleChange} />
                                             </div>
                                         </div>
+
                                         <div className="row auth-input mt-3">
                                             <div className="col">
                                                 <label htmlFor="password">Password</label>
@@ -74,6 +80,7 @@ export default function Login() {
                                                 <input id='login' type="checkbox" />
                                                 <label htmlFor='login' className='ms-2'>keep me logged in</label>
                                             </div>
+
                                             <div className="col-12 col-sm-5 text-start mt-2 mt-sm-0 text-sm-end ms-3 ms-sm-0">
                                                 <Link to='/Auth/forgot-password' className='text-warning'>Forgot Password?</Link>
                                             </div>
@@ -84,8 +91,14 @@ export default function Login() {
                                                 <p>Don't have an account? <Link to='/Auth/register' className='text-warning'>
                                                     Sign Up</Link> here</p>
                                             </div>
+
                                             <div className="col-12 col-sm-4 mt-2 mt-sm-0 text-end">
-                                                <button className='btn btn-bg px-4'>Login</button>
+                                                <button className='btn btn-bg px-4' disabled={isProcessing}>
+                                                    {!isProcessing
+                                                        ? 'Login'
+                                                        : <div className='spinner-grow spinner-grow-sm'></div>
+                                                    }
+                                                </button>
                                             </div>
                                         </div>
 

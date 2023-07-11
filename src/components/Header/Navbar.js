@@ -43,12 +43,15 @@ export default function Navbar() {
                             <li className="nav-item">
                                 <NavLink to='/' className="nav-link">HOME</NavLink>
                             </li>
+
                             <li className="nav-item">
                                 <NavLink to='/product' className="nav-link">PRODUCT</NavLink>
                             </li>
+
                             <li className="nav-item">
                                 <NavLink to='/about' className="nav-link">ABOUT</NavLink>
                             </li>
+
                             <li className="nav-item">
                                 <NavLink to='/contact' className="nav-link">CONTACT</NavLink>
                             </li>
@@ -62,6 +65,7 @@ export default function Navbar() {
                                         LOGOUT</NavLink>
                                 }
                             </li>
+
                             <li className="nav-item">
                                 <NavLink to='/cart' className="nav-link">
                                     <span className="position-relative"><ShoppingCart style={{ fontSize: '1.4rem' }} />

@@ -29,8 +29,8 @@ export default function Product() {
 
                         <div className="row my-5">
                             <div className="col">
-                                <p className='txt-justify text-sm-center'>Suspendisse varius enim in eros elementum tristique.
-                                    Duis cursus, mi quis viverra ornare, eros dollar interdum nulla.</p>
+                                <p className='txt-justify text-sm-center'>Suspendisse varius enim in eros elementum
+                                    tristique. Duis cursus, mi quis viverra ornare, eros dollar interdum nulla.</p>
                             </div>
                         </div>
 
@@ -55,7 +55,8 @@ export default function Product() {
                     {
                         product?.slice(0, 8).map((elem, i) => {
                             return (
-                                <HeroCard key={i} description={elem.description} price={elem.price} link={elem.image} id={elem.id} />
+                                <HeroCard key={i} description={elem.description} price={elem.price} link={elem.image}
+                                    id={elem.id} />
                             )
                         })
                     }
