@@ -74,7 +74,7 @@ export const furniture = [
         "size": 'large',
         "color": 'gold',
         "time": 'today',
-        "description": "A spacious sectional sofa for ample seating.",
+        "description": "Spacious sectional sofa for ample seating.",
         "image": "https://images.pexels.com/photos/276528/pexels-photo-276528.jpeg?auto=compress&cs=tinysrgb&w=400"
     },
     {
@@ -85,7 +85,7 @@ export const furniture = [
         "size": 'medium',
         "color": 'silver',
         "time": 'day15',
-        "description": "A modern platform bed for a contemporary bedroom.",
+        "description": "A modern bed for a contemporary bedroom.",
         "image": "https://images.pexels.com/photos/1034584/pexels-photo-1034584.jpeg?auto=compress&cs=tinysrgb&w=400"
     },
     {
@@ -217,7 +217,7 @@ export const furniture = [
         "size": 'medium',
         "color": 'black',
         "time": 'day10',
-        "description": "A canopy a romantic and cozy atmosphere.",
+        "description": "A canopy a romantic atmosphere.",
         "image": "https://images.pexels.com/photos/1743229/pexels-photo-1743229.jpeg?auto=compress&cs=tinysrgb&w=400"
     },
     {
@@ -261,7 +261,7 @@ export const furniture = [
         "size": 'large',
         "color": 'silver',
         "time": 'today',
-        "description": "A stunning chandelier to add a touch of glamour to your space.",
+        "description": "A Stunning to touch and add to your space.",
         "image": "https://images.pexels.com/photos/1668860/pexels-photo-1668860.jpeg?auto=compress&cs=tinysrgb&w=400"
     },
     {

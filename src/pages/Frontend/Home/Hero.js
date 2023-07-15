@@ -1,28 +1,50 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 
 import HeroCard from './HeroCard'
-import Instra from '../../../components/Instra'
 import { Link } from 'react-router-dom'
+import Instra from '../../../components/Instra'
+import { motion, useAnimation, useInView } from 'framer-motion'
 
 export default function Hero() {
+
+  const ref = useRef(null)
+  const inView = useInView(ref, { once: true })
+  const controls = useAnimation()
+
+  const animateText = {
+    visible: { opcacity: 1, scale: 1, y: 0 },
+    hidden: { opcacity: 0, scale: 0.80, y: 30 }
+  }
+
+  useEffect(() => {
+    if (inView) {
+      controls.start('visible')
+    }
+    else {
+      controls.start('hidden')
+    }
+  }, [inView, controls])
+
   return (
     <>
+
       <div className='hero'>
         <div className="container-fluid">
 
           <div className='hero-bgImg'>
             <div className="overlay">
-              <div className="row hero-card">
+              <div className="row hero-card" ref={ref}>
                 <div className="col">
-                  <div className="card hero-card-position">
 
+                  <motion.div variants={animateText} animate={controls} transition={{ duration: 2, delay: 0.25 }}
+                    initial='hidden' className="card hero-card-position">
                     <h6 className='fw-bold text-muted'>70% SALE OFF</h6>
                     <h3 className='fw-bold'>FURNITURE AT COST</h3>
                     <p className='text-muted txt-justify'>Suspendisse varius enim in eros elementum
                       tristique. Duis cursus, mi quis viverra ornare, eros dollar interdum nulla.</p>
                     <Link to='/about' className='btn btn-bg btn-sm py-2'>DISCOVER MORE</Link>
+                  </motion.div>
 
-                  </div>
                 </div>
               </div>
             </div>

@@ -19,7 +19,8 @@ export default function Contact() {
         setState(s => ({ ...s, [e.target.name]: e.target.value }))
     }
 
-    const handleSubmit = () => {
+    const handleSubmit = e => {
+        e.preventDefault()
         setState(initialState)
     }
 

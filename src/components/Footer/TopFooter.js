@@ -16,13 +16,13 @@ export default function TopFooter() {
                     <p className='text-muted'>Free Delivery on all orders</p>
                 </div>
                 <div className="col-6 col-md-3">
-                    <p className='mb-0 text-muted topfooter-icon'><MdOutlinePayment /></p>
-                    <p className='fw-bold mb-1 text-muted'>Secure Payment</p>
+                    <p className='mb-0 text-muted topfooter-icon'><BsCreditCard2Back /></p>
+                    <p className='fw-bold mb-1 text-muted'>Money Back Guarantee</p>
                     <p className='text-muted'>Free Delivery on all orders</p>
                 </div>
                 <div className="col-6 col-md-3">
-                    <p className='mb-0 text-muted topfooter-icon'><BsCreditCard2Back /></p>
-                    <p className='fw-bold mb-1 text-muted'>Money Back Guarantee</p>
+                    <p className='mb-0 text-muted topfooter-icon'><MdOutlinePayment /></p>
+                    <p className='fw-bold mb-1 text-muted'>Secure Payment</p>
                     <p className='text-muted'>Free Delivery on all orders</p>
                 </div>
                 <div className="col-6 col-md-3">

@@ -164,7 +164,7 @@ export default function Product1() {
                                                 style={{ height: '10rem' }} src={elem.image} alt={elem.name} /></Link>
 
                                             <div className="card-body">
-                                                <p className="card-text txt-justify">{elem.description?.slice(0, 45)} ...</p>
+                                                <p className="card-text txt-justify">{elem.description?.slice(0, 30)} ...</p>
                                                 <h5 className="card-title">{<FormatPrice price={elem.price} />}</h5>
                                             </div>
                                         </div>
