@@ -21,14 +21,17 @@ const reducer = (state, option) => {
 export default function AuthContextProvider({ children }) {
 
     const [state, dispatch] = useReducer(reducer, initialState)
+    const [screenLoader, setScreenLoader] = useState(true)
     const [user, setUser] = useState({})
 
     useEffect(() => {
         onAuthStateChanged(auth, (user) => {
             if (user) {
+                setScreenLoader(false)
                 setUser(user)
                 dispatch({ type: 'LOGIN', payload: { user } })
             } else {
+                setScreenLoader(false)
                 console.log('User Not Logged In')
             }
         });
@@ -36,7 +39,7 @@ export default function AuthContextProvider({ children }) {
 
     return (
         <>
-            <AuthContext.Provider value={{ ...state, dispatch, user }}>
+            <AuthContext.Provider value={{ ...state, dispatch, user, screenLoader }}>
                 {children}
             </AuthContext.Provider>
         </>

@@ -288,7 +288,7 @@ export default function Checkout() {
                     </div>
 
                     <div className="col text-end">
-                      <img src="/images/logo1.jpg" className='me-4' width={20} alt="error" />
+                      <img src="/images/paypal-logo.png" loading='lazy' className='me-4' width={60} alt="error" />
                     </div>
                   </div>
 

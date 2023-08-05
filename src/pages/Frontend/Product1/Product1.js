@@ -161,7 +161,7 @@ export default function Product1() {
                                         <div className="card rounded-0 w-100">
 
                                             <Link to={`/product2/${elem.id}`}><img className="card-img-top rounded-0"
-                                                style={{ height: '10rem' }} src={elem.image} alt={elem.name} /></Link>
+                                                style={{ height: '10rem' }} loading='lazy' src={elem.image} alt={elem.name} /></Link>
 
                                             <div className="card-body">
                                                 <p className="card-text txt-justify">{elem.description?.slice(0, 30)} ...</p>

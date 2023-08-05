@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { lazy, useEffect, useRef } from 'react'
 
 import HeroCard from './HeroCard'
 import { Link } from 'react-router-dom'
@@ -31,7 +31,7 @@ export default function Hero() {
       <div className='hero'>
         <div className="container-fluid">
 
-          <div className='hero-bgImg'>
+          <div className='hero-bgImg' onLoad={lazy}>
             <div className="overlay">
               <div className="row hero-card" ref={ref}>
                 <div className="col">
@@ -94,7 +94,7 @@ export default function Hero() {
         <div className="row">
 
           <div className="col-12 col-md-6 p-0">
-            <img src="https://wallpaperaccess.com/full/2076086.jpg" alt="network_issue" />
+            <img src="https://wallpaperaccess.com/full/2076086.jpg" loading='lazy' alt="network_issue" />
           </div>
 
           <div className="col-12 col-md-6">

@@ -1,13 +1,18 @@
 import React, { useContext } from 'react'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 
-import Frontend from './Frontend'
 import Auth from './Auth'
+import Frontend from './Frontend'
 import { AuthContext } from '../contexts/AuthContext'
+import ScreenLoader from '../components/ScreenLoader/ScreenLoader'
 
 export default function Index() {
 
-    const { isAuthenticated } = useContext(AuthContext)
+    const { screenLoader, isAuthenticated } = useContext(AuthContext)
+
+    if (screenLoader) {
+        return <ScreenLoader />
+    }
 
     return (
         <>

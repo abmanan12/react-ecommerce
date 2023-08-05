@@ -25,7 +25,7 @@ export default function About() {
       <div className="container">
         <div className="row text-center">
           <div className="col">
-            <img src="/images/table-1.jpeg" className='about-img px-2' alt="Chair Pic" />
+            <img src="/images/Table-1.jpeg" loading='lazy' className='about-img px-2' alt="Chair Pic" />
           </div>
         </div>
       </div>
@@ -47,7 +47,7 @@ export default function About() {
       <div className="container">
         <div className="row text-center">
           <div className="col">
-            <img src="/images/Sofa-1.jpg" alt="Sofa Pic" className='about-img px-2' />
+            <img src="/images/Sofa-1.jpg" loading='lazy' alt="Sofa Pic" className='about-img px-2' />
           </div>
         </div>
       </div>

@@ -50,7 +50,7 @@ export default function Product2() {
                     <div className="col-12 col-md-6 text-center product2-images">
                         <div className="row">
                             <div className="col">
-                                <img src={image} style={{ width: '80%' }}
+                                <img src={image} loading='lazy' style={{ width: '80%' }}
                                     alt={name} />
                             </div>
                         </div>
@@ -144,7 +144,7 @@ export default function Product2() {
                         </div>
 
                         <div className="mt-4 d-flex">
-                            <img src="/images/dp.jpg" alt="internet-error" width={50} />
+                            <img src="/images/dp.jpg" loading='lazy' alt="internet-error" width={50} />
                             <div className='ms-3'>
                                 <h6>Ali Haider</h6>
                                 <p className='stars'><span>{ratingStar}</span></p>
@@ -160,7 +160,7 @@ export default function Product2() {
                         </div>
 
                         <div className="mt-4 d-flex">
-                            <img src="/images/dp.jpg" alt="internet-error" width={50} />
+                            <img src="/images/dp.jpg" loading='lazy' alt="internet-error" width={50} />
                             <div className='ms-3'>
                                 <h6>Ali Haider</h6>
                                 <p className='stars'><span>{ratingStar}</span></p>
@@ -176,7 +176,7 @@ export default function Product2() {
                         </div>
 
                         <div className="mt-4 d-flex">
-                            <img src="/images/dp.jpg" alt="internet-error" width={50} />
+                            <img src="/images/dp.jpg" loading='lazy' alt="internet-error" width={50} />
                             <div className='ms-3'>
                                 <h6>Ali Haider</h6>
                                 <p className='stars'><span>{ratingStar}</span></p>

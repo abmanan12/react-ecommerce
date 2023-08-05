@@ -32,7 +32,7 @@ export default function HeroCard({ description, price, link, id }) {
                     initial='hidden' className="card rounded-0">
 
                     <Link to={`/product2/${id}`}><img className="card-img-top rounded-0 px-sm-0"
-                        style={{ height: '10rem' }} src={link} alt='network-error' /></Link>
+                        style={{ height: '10rem' }} loading='lazy' src={link} alt='network-error' /></Link>
 
                     <div className="card-body d-flex flex-column justify-content-between"
                         style={{ height: '10rem' }}>

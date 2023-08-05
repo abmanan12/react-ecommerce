@@ -58,7 +58,7 @@ export default function Cart() {
                                         return (
                                             <tr className='align-middle' key={i}>
                                                 <td className='content-center'>
-                                                    <img src={curElem.image} alt={curElem.name} width={60} />
+                                                    <img src={curElem.image} loading='lazy' alt={curElem.name} width={60} />
                                                 </td>
 
                                                 <td>{curElem.name}</td>

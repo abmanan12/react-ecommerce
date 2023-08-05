@@ -20,11 +20,11 @@ export default function Instra() {
                     </div>
                     <div className="col-12 col-md-6  col-lg-4 p-0">
                         <img src="https://images.pexels.com/photos/189295/pexels-photo-189295.jpeg?auto=compress&cs=tinysrgb&w=600"
-                            style={{ height: '350px', width: '100%' }} alt="Background-Img" />
+                            style={{ height: '350px', width: '100%' }} loading='lazy' alt="Background-Img" />
                     </div>
                     <div className="col-12 col-md-6 col-lg-4 p-0">
                         <img src="https://images.pexels.com/photos/12155610/pexels-photo-12155610.jpeg?auto=compress&cs=tinysrgb&w=600"
-                            style={{ height: '350px', width: '100%' }} alt="Background-Img" />
+                            style={{ height: '350px', width: '100%' }} loading='lazy' alt="Background-Img" />
                     </div>
                 </div>
             </div>
